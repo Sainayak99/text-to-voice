@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Text to Speech</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="card">
+    <h1>🔊 Text to Speech</h1>
+    <p class="subtitle">Type something and let the browser read it out loud</p>
+
+    <textarea id="text-input" placeholder="Type your text here...">Hello! Welcome to the Text to Speech demo. The browser can read any text out loud using the Web Speech API.</textarea>
+
+
+
+
+    <div class="buttons">
+      <button id="speak-btn">▶ Speak</button>
+      <button id="stop-btn" disabled>⏹ Stop</button>
+    </div>
+
+    <div id="status-box" class="status">Ready</div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

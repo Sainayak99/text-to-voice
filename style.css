@@ -1,0 +1,181 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f4f8;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 28px;
+  color: #1a1a2e;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+textarea {
+  width: 100%;
+  height: 140px;
+  padding: 14px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 15px;
+  resize: vertical;
+  font-family: inherit;
+  color: #333;
+  transition: border-color 0.2s;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #4f8ef7;
+}
+
+.controls {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.control-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.control-group label {
+  font-size: 14px;
+  color: #444;
+  width: 130px;
+  flex-shrink: 0;
+}
+
+select {
+  flex: 1;
+  padding: 8px 10px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #333;
+  background: white;
+  cursor: pointer;
+}
+
+select:focus {
+  outline: none;
+  border-color: #4f8ef7;
+}
+
+input[type="range"] {
+  flex: 1;
+  accent-color: #4f8ef7;
+  cursor: pointer;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+
+button {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, opacity 0.2s;
+  min-width: 90px;
+}
+
+#speak-btn {
+  background: #4f8ef7;
+  color: white;
+}
+
+#speak-btn:hover {
+  background: #3a7de0;
+}
+
+#pause-btn {
+  background: #f0a500;
+  color: white;
+}
+
+#pause-btn:hover:not(:disabled) {
+  background: #d9920a;
+}
+
+#resume-btn {
+  background: #27ae60;
+  color: white;
+}
+
+#resume-btn:hover:not(:disabled) {
+  background: #219150;
+}
+
+#stop-btn {
+  background: #e74c3c;
+  color: white;
+}
+
+#stop-btn:hover:not(:disabled) {
+  background: #c0392b;
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.status {
+  margin-top: 16px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  background: #f0f4f8;
+  color: #555;
+  text-align: center;
+}
+
+.status.speaking {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.status.paused {
+  background: #fff8e1;
+  color: #f57f17;
+}
+
+.status.error {
+  background: #fdecea;
+  color: #c62828;
+}
